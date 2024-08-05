@@ -29,6 +29,7 @@ public class WireMockTest {
 
         given()
                 .when()
+                .relaxedHTTPSValidation()
                 .contentType(ContentType.JSON)
                 .get("http://localhost:" + port + "/account")
                 .then()
